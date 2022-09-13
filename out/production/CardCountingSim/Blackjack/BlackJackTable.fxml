@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="841.0" prefWidth="1157.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Blackjack.BlackjackTable_Controller">
+   <children>
+      <Pane fx:id="blackJackTablePane" layoutX="-1.0" prefHeight="841.0" prefWidth="1158.0" style="-fx-background-color: #124429; -fx-border-color: #e25822;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#124429" height="154.0" layoutX="104.0" layoutY="281.0" rotate="13.8" stroke="WHITE" strokeType="INSIDE" width="104.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#124429" height="154.0" layoutX="237.0" layoutY="313.0" rotate="10.4" stroke="WHITE" strokeType="INSIDE" width="104.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#124429" height="154.0" layoutX="378.0" layoutY="338.0" rotate="7.8" stroke="WHITE" strokeType="INSIDE" width="104.0" />
+            <Rectangle fx:id="playerOneContainer" arcHeight="5.0" arcWidth="5.0" fill="#124429" height="156.0" layoutX="527.0" layoutY="352.0" stroke="WHITE" strokeType="INSIDE" width="104.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#124429" height="154.0" layoutX="673.0" layoutY="338.0" rotate="-7.8" stroke="WHITE" strokeType="INSIDE" width="104.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#124429" height="154.0" layoutX="809.0" layoutY="313.0" rotate="-10.4" stroke="WHITE" strokeType="INSIDE" width="104.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#124429" height="154.0" layoutX="943.0" layoutY="281.0" rotate="-13.8" stroke="WHITE" strokeType="INSIDE" width="104.0" />
+            <Rectangle fx:id="dealerContainer" arcHeight="5.0" arcWidth="5.0" fill="#124429" height="156.0" layoutX="527.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+            <Text layoutX="541.0" layoutY="147.0" rotate="-45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEALER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="541.0" layoutY="439.0" rotate="-45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="deckContainer" arcHeight="5.0" arcWidth="5.0" fill="#124429" height="154.0" layoutX="943.0" layoutY="24.0" stroke="#e25822" strokeType="INSIDE" width="104.0" />
+            <Text fill="#e25822" layoutX="971.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoe">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="shoeImageView1" fitHeight="150.0" fitWidth="104.0" layoutX="943.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Cards/cardBacks/blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="shoeImageView2" fitHeight="150.0" fitWidth="104.0" layoutX="949.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Cards/cardBacks/blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="shoeImageView3" fitHeight="150.0" fitWidth="104.0" layoutX="943.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Cards/cardBacks/blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="shoeImageView4" fitHeight="150.0" fitWidth="104.0" layoutX="936.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Cards/cardBacks/blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="shoeImageView5" fitHeight="150.0" fitWidth="104.0" layoutX="943.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Cards/cardBacks/blue.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="betSettingsPane" layoutX="14.0" layoutY="555.0" prefHeight="273.0" prefWidth="236.0" style="-fx-background-color: #AAB8C2;">
+               <children>
+                  <Text layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bank:" wrappingWidth="57.336727142333984">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="19.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="bankBox" editable="false" layoutX="71.0" layoutY="15.0" prefHeight="25.0" prefWidth="149.0">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </TextField>
+                  <Spinner fx:id="betSpinner" layoutX="71.0" layoutY="74.0" prefHeight="42.0" prefWidth="149.0" />
+                  <Text layoutX="14.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet:" wrappingWidth="57.336727142333984">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="playerCardPane" layoutX="271.0" layoutY="555.0" prefHeight="273.0" prefWidth="616.0" style="-fx-border-color: #1DA1F2;">
+               <children>
+                  <Pane prefHeight="273.0" prefWidth="236.0" style="-fx-border-color: #1DA1F2;">
+                     <children>
+                        <ComboBox fx:id="playerSelectComboBox" layoutX="12.0" layoutY="14.0" onAction="#playerSelectComboBoxAction" prefHeight="25.0" prefWidth="115.0" promptText="Player Select" />
+                        <Text fill="#00ff09" layoutX="12.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Hand:" />
+                        <Text fx:id="currentHandInfo" fill="WHITE" layoutX="12.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="212.6781005859375" />
+                        <Text fill="#00ff09" layoutX="12.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hand Value:" />
+                        <Text fx:id="handValueInfo" fill="WHITE" layoutX="12.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="212.6781005859375" />
+                        <Text fill="#00ff09" layoutX="12.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Strategy:" />
+                        <Text fx:id="basicStrategyInfo" fill="WHITE" layoutX="12.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="212.6781005859375" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="236.0" prefHeight="273.0" prefWidth="378.0" style="-fx-border-color: #1DA1F2;">
+                     <children>
+                        <Text fill="#ff4a4a" layoutX="38.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enable Card Counting Method" wrappingWidth="212.6781005859375" />
+                        <CheckBox fx:id="CCEnableButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#CCEnableButtonAction" />
+                        <Text fill="#00ff09" layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Method:" wrappingWidth="63.90234375" />
+                        <Text fx:id="CCInfoName" fill="WHITE" layoutX="144.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="212.6781005859375" />
+                        <Text fill="#00ff09" layoutX="14.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Running Count:" />
+                        <Text fx:id="CCInfoRC" fill="WHITE" layoutX="144.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="212.6781005859375" />
+                        <Text fill="#00ff09" layoutX="14.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="True Count:" wrappingWidth="82.3125" />
+                        <Text fill="#00ff09" layoutX="14.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet Spread:" />
+                        <Text fx:id="CCInfoTC" fill="WHITE" layoutX="144.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="212.6781005859375" />
+                        <Text fx:id="CCInfoBS" fill="WHITE" layoutX="144.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="82.3125" />
+                        <Text fill="#00ff09" layoutX="14.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommended Bet:" />
+                        <Text fx:id="CCInfoRB" fill="WHITE" layoutX="144.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="82.3125" />
+                     </children>
+                  </Pane>
+               </children></Pane>
+            <Button fx:id="dealButton" layoutX="962.0" layoutY="516.0" mnemonicParsing="false" onAction="#dealButtonAction" prefHeight="56.0" prefWidth="115.0" text="Deal">
+               <font>
+                  <Font name="Yu Gothic Medium" size="20.0" />
+               </font>
+            </Button>
+            <Pane layoutX="941.0" layoutY="592.0" prefHeight="185.0" prefWidth="157.0" style="-fx-border-color: #e25822;">
+               <children>
+                  <Button fx:id="hitButton" mnemonicParsing="false" onAction="#hitButtonAction" prefHeight="56.0" prefWidth="157.0" style="-fx-background-color: #90ee90;" text="Hit">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="doubleDownButton" layoutY="65.0" mnemonicParsing="false" onAction="#doubleDownButtonAction" prefHeight="56.0" prefWidth="157.0" style="-fx-background-color: ff7fff;" text="Double Down">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="standButton" layoutY="129.0" mnemonicParsing="false" onAction="#standButtonAction" prefHeight="56.0" prefWidth="157.0" style="-fx-background-color: #92a1cf;" text="Stand">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Line fx:id="dealerPath" endX="199.0" endY="-377.0" layoutX="380.0" layoutY="515.0" startX="616.0000610351562" startY="-414.79998779296875" visible="false" />
+            <Line fx:id="dealersCardPath" endX="-5.20001220703125" endY="2.70709228515625" layoutX="478.0" layoutY="136.0" startX="100.29290771484375" startY="2.70709228515625" visible="false" />
+            <Line fx:id="dealerPath2" endX="200.4000244140625" endY="-374.39996337890625" layoutX="390.0" layoutY="525.0" startX="605.0000610351562" startY="-424.0" visible="false" />
+            <Line fx:id="dealerPath3" endX="211.5999755859375" endY="-364.0" layoutX="390.0" layoutY="525.0" startX="605.0000610351562" startY="-424.0" visible="false" />
+            <Line fx:id="dealerPath4" endX="213.5999755859375" endY="-364.39996337890625" layoutX="400.0" layoutY="535.0" startX="595.0000610351562" startY="-434.0" visible="false" />
+            <Line fx:id="dealerPath5" endX="214.0" endY="-363.199951171875" layoutX="410.0" layoutY="545.0" startX="585.0000610351562" startY="-444.0" visible="false" />
+            <Line fx:id="dealerPath6" endX="211.0" endY="-361.199951171875" layoutX="420.0" layoutY="555.0" startX="575.0000610351562" startY="-454.0" visible="false" />
+            <Line fx:id="playerOnePath" endX="-174.0" endY="153.0" layoutX="753.0" layoutY="277.0" startX="242.00006103515625" startY="-176.0" visible="false" />
+            <Line fx:id="playerOnePath2" endX="-170.20001220703125" endY="154.79998779296875" layoutX="763.0" layoutY="287.0" startX="232.00006103515625" startY="-186.0" visible="false" />
+            <Line fx:id="playerOnePath3" endX="-169.0" endY="156.79998779296875" layoutX="773.0" layoutY="297.0" startX="222.00006103515625" startY="-196.0" visible="false" />
+            <Line fx:id="playerOnePath4" endX="-164.60003662109375" endY="158.0" layoutX="783.0" layoutY="307.0" startX="212.00006103515625" startY="-206.0" visible="false" />
+            <Line fx:id="playerOnePath5" endX="-162.0" endY="158.4000244140625" layoutX="793.0" layoutY="317.0" startX="202.00006103515625" startY="-216.0" visible="false" />
+            <Line fx:id="playerOnePath6" endX="-158.20001220703125" endY="162.0" layoutX="803.0" layoutY="327.0" startX="192.00006103515625" startY="-226.0" visible="false" />
+            <Text fill="#e7ff12" layoutX="412.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLACKJACK PAYS 3 TO 2">
+               <font>
+                  <Font name="Yu Gothic Medium" size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#98a424" layoutX="422.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dealer must stand on 17 and must draw to 16">
+               <font>
+                  <Font name="Yu Gothic Medium" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#e7ff12" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decks in Shoe:" />
+            <Text fx:id="decksInShoeInfo" fill="WHITE" layoutX="124.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+            <Text fill="#e7ff12" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoe Penetration:" />
+            <Text fx:id="cardsInShoeInfo" fill="WHITE" layoutX="124.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" wrappingWidth="93.5625" />
+            <Text fill="#e7ff12" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cards in Shoe:" />
+            <Text fx:id="shoePenetrationInfo" fill="WHITE" layoutX="124.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+            <Text fill="#e7ff12" layoutX="14.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cards in Deck:" />
+            <Text fx:id="cardsInDeckInfo" fill="WHITE" layoutX="124.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+            <Text fill="#e7ff12" layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deck Penetration:" />
+            <Text fx:id="deckPenetrationInfo" fill="WHITE" layoutX="124.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
